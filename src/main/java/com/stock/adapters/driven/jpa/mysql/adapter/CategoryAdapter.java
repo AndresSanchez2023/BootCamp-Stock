@@ -6,6 +6,7 @@ import com.stock.domain.model.Category;
 import com.stock.domain.spi.ICategoryPersistencePort;
 import lombok.RequiredArgsConstructor;
 
+
 @RequiredArgsConstructor
 public class CategoryAdapter implements ICategoryPersistencePort {
 
@@ -21,4 +22,10 @@ public class CategoryAdapter implements ICategoryPersistencePort {
     public void saveCategory(Category category) {
         categoryRepository.save(categoryEntityMapper.toEntity(category));
     }
+
+    @Override
+    public Long getTotalItems() {
+        return categoryRepository.count();
+    }
+
 }

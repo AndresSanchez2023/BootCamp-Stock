@@ -23,31 +23,32 @@ public class Category {
         this.description = requireNonNull(description, DomainConstants.FIELD_DESCRIPTION_NULL_MESSAGE);
     }
 
-    private void validateName (String name){
-        if(name.trim().isEmpty()){
+    private void validateName(String name) {
+        if (name.trim().isEmpty()) {
             throw new EmptyFieldException(DomainConstants.FIELD_NAME_NULL_MESSAGE);
         }
-        if(name.length() > DomainConstants.FIELD_NAME_MAX_MESSAGE || name.length() < DomainConstants.FIELD_NAME_MIN_MESSAGE){
+        if (name.length() > DomainConstants.FIELD_NAME_MAX_MESSAGE || name.length() < DomainConstants.FIELD_NAME_MIN_MESSAGE) {
             throw new ValidateSizeFieldException(DomainConstants.FIELD_NAME_VALIDATE_LENGTH_EXCEPTION_MESSAGE);
         }
         Matcher matcher = DomainConstants.NAME_PATTERN.matcher(name);
-        if(!matcher.matches()){
+        if (!matcher.matches()) {
             throw new InvalidArgumentsInFieldException(DomainConstants.FIELD_NAME_INVALID_MESSAGE);
         }
     }
 
-    private void validateDescription(String description){
-        if(description.trim().isEmpty()){
+    private void validateDescription(String description) {
+        if (description.trim().isEmpty()) {
             throw new EmptyFieldException(DomainConstants.FIELD_DESCRIPTION_NULL_MESSAGE);
         }
-        if(description.length() > DomainConstants.FIELD_DESCRIPTION_MAX_MESSAGE || description.length() < DomainConstants.FIELD_DESCRIPTION_MIN_MESSAGE){
+        if (description.length() > DomainConstants.FIELD_DESCRIPTION_MAX_MESSAGE || description.length() < DomainConstants.FIELD_DESCRIPTION_MIN_MESSAGE) {
             throw new ValidateSizeFieldException(DomainConstants.FIELD_DESCRIPTION_VALIDATE_LENGTH_EXCEPTION_MESSAGE);
         }
         Matcher matcher = DomainConstants.DESCRIPTION_PATTERN.matcher(description);
-        if(!matcher.matches()){
+        if (!matcher.matches()) {
             throw new InvalidArgumentsInFieldException(DomainConstants.FIELD_DESCRIPTION_INVALID_MESSAGE);
         }
     }
+
     public Long getId() {
         return id;
     }
@@ -55,6 +56,7 @@ public class Category {
     public String getName() {
         return name;
     }
+
     public String getDescription() {
         return description;
     }

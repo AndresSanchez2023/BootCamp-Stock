@@ -1,6 +1,5 @@
-package com.stock.adapters.driven.jpa.mysql;
+package com.stock.adapters.driven.jpa.mysql.adapter;
 
-import com.stock.adapters.driven.jpa.mysql.adapter.CategoryAdapter;
 import com.stock.adapters.driven.jpa.mysql.entity.CategoryEntity;
 import com.stock.adapters.driven.jpa.mysql.mapper.ICategoryEntityMapper;
 import com.stock.adapters.driven.jpa.mysql.repository.ICategoryRepository;
