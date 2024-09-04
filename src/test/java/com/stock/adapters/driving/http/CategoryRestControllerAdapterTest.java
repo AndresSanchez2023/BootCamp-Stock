@@ -33,7 +33,6 @@ class CategoryRestControllerAdapterTest {
     @Test
     void addCategory_ShouldReturnCreatedStatus() throws Exception {
 
-        //AddCategoryRequest addCategoryRequest = new AddCategoryRequest(DomainConstants.DEFAULT_NAME, DomainConstants.DEFAULT_DESCRIPTION);
         Category category = CategoryFactory.createDefaultCategory();
 
         when(categoryRequestMapper.addRequestToCategory(any(AddCategoryRequest.class))).thenReturn(category);

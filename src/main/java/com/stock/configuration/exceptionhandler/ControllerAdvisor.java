@@ -1,9 +1,6 @@
 package com.stock.configuration.exceptionhandler;
 
-import com.stock.domain.exception.CategoryAlreadyExistsException;
-import com.stock.domain.exception.EmptyFieldException;
-import com.stock.domain.exception.InvalidArgumentsInFieldException;
-import com.stock.domain.exception.ValidateSizeFieldException;
+import com.stock.domain.exception.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -49,6 +46,15 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
     }
     @ExceptionHandler(InvalidArgumentsInFieldException.class)
     public ResponseEntity<ExceptionResponse> handleInvalidArgumentsInFieldException(InvalidArgumentsInFieldException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+
+    @ExceptionHandler(BrandAlreadyExistsException.class)
+    public ResponseEntity<ExceptionResponse> handleBrandAlreadyExist(BrandAlreadyExistsException exception){
         return ResponseEntity.badRequest().body(new ExceptionResponse(
                 String.format(exception.getMessage()),
                 HttpStatus.BAD_REQUEST.toString(),

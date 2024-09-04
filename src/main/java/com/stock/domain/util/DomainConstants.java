@@ -3,7 +3,7 @@ package com.stock.domain.util;
 import java.util.regex.Pattern;
 
 public final class DomainConstants {
-    private DomainConstants(){
+    private DomainConstants() {
         throw new IllegalArgumentException("Utility Class");
     }
 
@@ -11,8 +11,9 @@ public final class DomainConstants {
     public static final String FIELD_DESCRIPTION_NULL_MESSAGE = "Field 'description' cannot be null";
 
     public static final String FIELD_NAME_VALIDATE_LENGTH_EXCEPTION_MESSAGE = "The field 'name' cannot be less than 4 characters or more than 50 characters";
-    public static final String FIELD_DESCRIPTION_VALIDATE_LENGTH_EXCEPTION_MESSAGE = "The field 'description' cannot be less than 4 characters or more than exceed 90 characters";
+    public static final String FIELD_DESCRIPTION_VALIDATE_LENGTH_EXCEPTION_MESSAGE = "The field 'description' cannot be less than 17 characters or more than exceed 90 characters";
 
+    public static final String FIELD_DESCRIPTION_BRAND_VALIDATE_LENGTH_EXCEPTION_MESSAGE = "The field 'description' cannot be less than 17 characters or more than exceed 120 characters";
 
     public static final String FIELD_NAME_INVALID_MESSAGE = "The field 'name' only accepts letters and spaces";
     public static final String FIELD_DESCRIPTION_INVALID_MESSAGE = "The field 'description' only accepts letters and spaces";
@@ -36,4 +37,17 @@ public final class DomainConstants {
     public static final String INVALID_NAME = "Invalid@Name";
 
     public static final String INVALID_DESCRIPTION = "Invalid@Description";
+
+    //Brand
+
+    public static final String BRAND_ALREADY_EXISTS_EXCEPTION_MESSAGE = "Brand Already Exists EXCEPTION";
+    public static final String BRAND = "BRAND";
+    public static final String ADD_BRAND = "Allows you to create a new brand";
+    public static final String BRAND_CREATED_SUCCESS = "Successful response, brand created";
+    public static final String INVALID_REQUEST_ERROR = "Request error";
+    public static final String BRAND_CONTROLLER_DESCRIPTION = "Branding for products, pagination and brand sorting";
+    public static final String CODE_CREATED = "201";
+    public static final String CODE_BAD_REQUEST = "400";
+    public static final String SCHEMAS_CREATED_BRAND_REQUEST_PARAMETER = "Created Brand request object containing Id, name, description";
+    public static final String MEDIA_TYPE = "application/json";
 }
