@@ -55,6 +55,15 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         ));
     }
 
+    @ExceptionHandler(BrandAlreadyExistsException.class)
+    public ResponseEntity<ExceptionResponse> handleBrandAlreadyExist(BrandAlreadyExistsException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
         Map<String, Object> errors = new HashMap<>();
