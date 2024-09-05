@@ -4,7 +4,7 @@ import com.stock.adapters.driven.jpa.mysql.entity.BrandEntity;
 import com.stock.adapters.driven.jpa.mysql.mapper.IBrandEntityMapper;
 import com.stock.adapters.driven.jpa.mysql.repository.IBrandRepository;
 import com.stock.domain.model.Brand;
-import com.stock.domain.model.BrandFactory;
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.BrandFactory;
 import com.stock.domain.util.DomainConstants;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

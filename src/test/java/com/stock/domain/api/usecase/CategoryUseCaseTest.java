@@ -3,7 +3,7 @@ package com.stock.domain.api.usecase;
 import com.stock.adapters.driven.jpa.mysql.adapter.factories.PaginationFactory;
 import com.stock.domain.exception.CategoryAlreadyExistsException;
 import com.stock.domain.model.Category;
-import com.stock.domain.model.CategoryFactory;
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.CategoryFactory;
 import com.stock.domain.model.Paginated;
 import com.stock.domain.model.Pagination;
 import com.stock.domain.spi.ICategoryPersistencePort;

@@ -3,6 +3,9 @@ package com.stock.configuration;
 
 public class Constants {
 
+
+    public static final String BRAND_RESPONSE_CLASS_DESCRIPTION = "Response Object, Of brand";
+
     private Constants() {
         throw new IllegalArgumentException("Utility Class");
     }
@@ -12,6 +15,7 @@ public class Constants {
     public static final String VERSION_OPENAPI = "v1";
     public static final String DESCRIPTION_OPENAPI = "Provides specific features for managing categories, brands and products";
 
+    //Category -----
     public static final String CATEGORY = "Category";
     public static final String ADD_CATEGORY = "Allows you to create a new category";
     public static final String CATEGORY_CREATED_SUCCESS = "Successful response, category created";
@@ -20,6 +24,13 @@ public class Constants {
     public static final String CODE_CREATED = "201";
     public static final String CODE_BAD_REQUEST = "400";
     public static final String MEDIA_TYPE = "application/json";
+
+    //Brand --------
+    public static final String BRAND = "BRAND";
+    public static final String ADD_BRAND = "Allows you to create a new brand";
+    public static final String BRAND_CREATED_SUCCESS = "Successful response, brand created";
+    public static final String BRAND_CONTROLLER_DESCRIPTION = "Branding for products, pagination and brand sorting";
+    public static final String SCHEMAS_CREATED_BRAND_REQUEST_PARAMETER = "Created Brand request object containing Id, name, description";
 
     //---------------------------List
 
@@ -61,4 +72,18 @@ public class Constants {
     public static final String SIZE_DEFAULT_VALUE_CONTROLLER = "10";
     public static final String SORT_FIELD_DEFAULT_VALUE_CONTROLLER = "name";
     public static final String SORT_DIRECTION_DEFAULT_VALUE_CONTROLLER = "asc";
+
+    //Brand ----------
+
+    public static final String LIST_BRAND = "Allows you to list all brands paginated and ordered";
+    public static final String BRAND_LIST_SUCCESS = "Successful response, brands listed";
+    public static final String BRAND_RESPONSE_ID = "Identifier Of brand";
+    public static final String BRAND_RESPONSE_NAME = "Name Of brand";
+    public static final String BRAND_RESPONSE_DESCRIPTION = "Description Of brand";
+
+    public static final String BRAND_ENDPOINT = "/brand/";
+
+    public static final String BRAND_RESPONSE_ID_EXAMPLE = "1";
+    public static final String BRAND_RESPONSE_NAME_EXAMPLE = "Lenovo";
+    public static final String BRAND_RESPONSE_DESCRIPTION_EXAMPLE = "We offer a full range of PCs and tablets, monitors, accessories, smartphones, smart home and smart collaboration solutions, virtual and augmented reality";
 }

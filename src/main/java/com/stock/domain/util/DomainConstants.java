@@ -51,6 +51,10 @@ public final class DomainConstants {
     public static final String MESSAGE_PAGE_OUT_OF_RANGE = "No results were found on the requested page. Please try a page number less than: ";
     public static final String LIST_TO_NOT_BE_EMPTY = "Expected items list to not be empty";
     public static final String LIST_TO_BE_EMPTY = "Expected items list to be empty";
+
+    public static final Long LIST_COUNT_IS_EMPTY_LONG = 0L;
+    public static final Long LIST_COUNT_NOT_EMPTY_LONG = 5L;
+    public static final Long TOTAL_ITEMS_PAGINATED_LONG = 10L;
     //Test ----- Category
     public static final String INVALID_NAME = "Invalid@Name";
     public static final String INVALID_DESCRIPTION = "Invalid@Description";
@@ -60,21 +64,14 @@ public final class DomainConstants {
 
     public static final Integer PAGE_NUMBER_DEFAULT = 0;
     public static final Integer PAGE_SIZE_DEFAULT = 10;
-
     public static final Long PAGINATED_TOTAL_ITEMS_DEFAULT = 1L;
     public static final Integer PAGINATED_CURRENT_PAGE_DEFAULT = 0;
     public static final Integer PAGINATED_TOTAL_PAGE_DEFAULT = 1;
 
-    //Brand
+    // Brand
 
     public static final String BRAND_ALREADY_EXISTS_EXCEPTION_MESSAGE = "Brand Already Exists EXCEPTION";
-    public static final String BRAND = "BRAND";
-    public static final String ADD_BRAND = "Allows you to create a new brand";
-    public static final String BRAND_CREATED_SUCCESS = "Successful response, brand created";
-    public static final String INVALID_REQUEST_ERROR = "Request error";
-    public static final String BRAND_CONTROLLER_DESCRIPTION = "Branding for products, pagination and brand sorting";
-    public static final String CODE_CREATED = "201";
-    public static final String CODE_BAD_REQUEST = "400";
-    public static final String SCHEMAS_CREATED_BRAND_REQUEST_PARAMETER = "Created Brand request object containing Id, name, description";
-    public static final String MEDIA_TYPE = "application/json";
+    public static final String INVALID_SORT_FIELD = "InvalidSort";
+    public static final String INVALID_SORT_DIRECTION = "InvalidSortDirection";
+
 }

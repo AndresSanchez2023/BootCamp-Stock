@@ -20,4 +20,9 @@ public class BrandAdapter implements IBrandPersistencePort {
     public Boolean existsByName(String name) {
         return brandRepository.existsByName(name);
     }
+
+    @Override
+    public Long getTotalItems() {
+        return brandRepository.count();
+    }
 }

@@ -1,4 +1,4 @@
-package com.stock.adapters.driving.http;
+package com.stock.adapters.driving.http.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.stock.adapters.driven.jpa.mysql.adapter.factories.PaginatedResponseFactory;
@@ -11,7 +11,7 @@ import com.stock.adapters.driving.http.dto.response.PaginatedResponse;
 import com.stock.adapters.driving.http.mapper.ICategoryRequestMapper;
 import com.stock.domain.api.ICategoryServicePort;
 import com.stock.domain.model.Category;
-import com.stock.domain.model.CategoryFactory;
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.CategoryFactory;
 import com.stock.domain.model.Paginated;
 import com.stock.domain.model.Pagination;
 import com.stock.domain.util.DomainConstants;

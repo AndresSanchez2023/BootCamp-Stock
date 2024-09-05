@@ -1,5 +1,6 @@
 package com.stock.domain.model;
 
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.CategoryFactory;
 import com.stock.domain.exception.EmptyFieldException;
 import com.stock.domain.exception.InvalidArgumentsInFieldException;
 import com.stock.domain.exception.ValidateSizeFieldException;

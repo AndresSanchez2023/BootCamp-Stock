@@ -1,5 +1,6 @@
-package com.stock.domain.model;
+package com.stock.adapters.driven.jpa.mysql.adapter.factories;
 
+import com.stock.domain.model.Category;
 import com.stock.domain.util.DomainConstants;
 
 public class CategoryFactory {

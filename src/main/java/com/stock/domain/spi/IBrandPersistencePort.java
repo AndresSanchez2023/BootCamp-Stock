@@ -5,4 +5,5 @@ import com.stock.domain.model.Brand;
 public interface IBrandPersistencePort {
     void saveBrand(Brand brand);
     Boolean existsByName(String name);
+    Long getTotalItems();
 }

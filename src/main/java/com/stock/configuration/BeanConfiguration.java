@@ -13,6 +13,7 @@ import com.stock.domain.api.IBrandServicePort;
 import com.stock.domain.api.ICategoryServicePort;
 import com.stock.domain.api.usecase.BrandUseCase;
 import com.stock.domain.api.usecase.CategoryUseCase;
+import com.stock.domain.model.Brand;
 import com.stock.domain.model.Category;
 import com.stock.domain.spi.IBrandPersistencePort;
 import com.stock.domain.spi.ICategoryPersistencePort;
@@ -50,6 +51,24 @@ public class BeanConfiguration {
     }
 
     @Bean
+    public IBrandPersistencePort brandPersistencePort() {
+        return new BrandAdapter(brandRepository, brandEntityMapper);
+    }
+
+    @Bean
+    public IPaginationPort<Brand> brandPaginationPort() {
+        return new JpaPaginationAdapter<>(brandRepository, brandEntityMapper::toModel);
+    }
+    @Bean
+    public IBrandServicePort brandServicePort() {
+        return new BrandUseCase(brandPersistencePort(), brandPaginationPort());
+    }
+    @Bean
+    public InBrandAdapter inBrandAdapter() {
+        return new InBrandAdapter(brandRequestMapper, brandServicePort());
+
+    }
+    @Bean
     public OpenAPI api() {
         return new OpenAPI()
                 .info(new Info()
@@ -57,19 +76,5 @@ public class BeanConfiguration {
                         .version(Constants.VERSION_OPENAPI)
                         .description(Constants.DESCRIPTION_OPENAPI)
                 );
-    }
-
-    @Bean
-    public IBrandPersistencePort brandPersistencePort() {
-        return new BrandAdapter(brandRepository, brandEntityMapper);
-    }
-
-    @Bean
-    public IBrandServicePort brandServicePort() {
-        return new BrandUseCase(brandPersistencePort());
-    }
-    @Bean
-    public InBrandAdapter inBrandAdapter(){
-        return new InBrandAdapter(brandRequestMapper, brandServicePort());
     }
 }

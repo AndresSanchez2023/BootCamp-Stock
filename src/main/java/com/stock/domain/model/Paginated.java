@@ -8,7 +8,6 @@ public class Paginated<T> {
     private final int currentPage;
     private final Long totalItems;
     private final int totalPages;
-
     private final String message;
 
     public Paginated(List<T> entities, int currentPage, Long totalItems, int totalPages, String message) {

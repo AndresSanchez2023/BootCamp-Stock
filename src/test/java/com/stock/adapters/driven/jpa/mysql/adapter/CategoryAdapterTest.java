@@ -4,7 +4,7 @@ import com.stock.adapters.driven.jpa.mysql.entity.CategoryEntity;
 import com.stock.adapters.driven.jpa.mysql.mapper.ICategoryEntityMapper;
 import com.stock.adapters.driven.jpa.mysql.repository.ICategoryRepository;
 import com.stock.domain.model.Category;
-import com.stock.domain.model.CategoryFactory;
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.CategoryFactory;
 import com.stock.domain.util.DomainConstants;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -5,7 +5,7 @@ import com.stock.adapters.driven.jpa.mysql.adapter.factories.PageFactory;
 import com.stock.adapters.driven.jpa.mysql.adapter.factories.PaginationFactory;
 import com.stock.adapters.driven.jpa.mysql.entity.CategoryEntity;
 import com.stock.domain.model.Category;
-import com.stock.domain.model.CategoryFactory;
+import com.stock.adapters.driven.jpa.mysql.adapter.factories.CategoryFactory;
 import com.stock.domain.model.Paginated;
 import com.stock.domain.model.Pagination;
 import com.stock.domain.util.DomainConstants;
