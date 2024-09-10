@@ -64,6 +64,39 @@ public class ControllerAdvisor extends ResponseEntityExceptionHandler {
         ));
     }
 
+    @ExceptionHandler(BrandNotFoundException.class)
+    public ResponseEntity<ExceptionResponse> handleBrandNotFoundException(BrandNotFoundException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+    @ExceptionHandler(CategoryNotFoundException.class)
+    public ResponseEntity<ExceptionResponse> handleCategoryNotFoundException(CategoryNotFoundException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+    @ExceptionHandler(InvalidCategoryListException.class)
+    public ResponseEntity<ExceptionResponse> handleInvalidCategoryListException(InvalidCategoryListException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+    @ExceptionHandler(ProductAlreadyExistsException.class)
+    public ResponseEntity<ExceptionResponse> handleProductAlreadyExistsException(ProductAlreadyExistsException exception){
+        return ResponseEntity.badRequest().body(new ExceptionResponse(
+                String.format(exception.getMessage()),
+                HttpStatus.BAD_REQUEST.toString(),
+                LocalDateTime.now()
+        ));
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatusCode status, WebRequest request) {
         Map<String, Object> errors = new HashMap<>();

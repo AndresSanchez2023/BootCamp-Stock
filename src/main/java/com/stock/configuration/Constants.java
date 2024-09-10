@@ -4,7 +4,7 @@ package com.stock.configuration;
 public class Constants {
 
 
-    public static final String BRAND_RESPONSE_CLASS_DESCRIPTION = "Response Object, Of brand";
+
 
     private Constants() {
         throw new IllegalArgumentException("Utility Class");
@@ -31,6 +31,7 @@ public class Constants {
     public static final String BRAND_CREATED_SUCCESS = "Successful response, brand created";
     public static final String BRAND_CONTROLLER_DESCRIPTION = "Branding for products, pagination and brand sorting";
     public static final String SCHEMAS_CREATED_BRAND_REQUEST_PARAMETER = "Created Brand request object containing Id, name, description";
+    public static final String BRAND_RESPONSE_CLASS_DESCRIPTION = "Response Object, Of brand";
 
     //---------------------------List
 
@@ -86,4 +87,12 @@ public class Constants {
     public static final String BRAND_RESPONSE_ID_EXAMPLE = "1";
     public static final String BRAND_RESPONSE_NAME_EXAMPLE = "Lenovo";
     public static final String BRAND_RESPONSE_DESCRIPTION_EXAMPLE = "We offer a full range of PCs and tablets, monitors, accessories, smartphones, smart home and smart collaboration solutions, virtual and augmented reality";
+
+    //Product
+
+    public static final String PRODUCT = "PRODUCT";
+    public static final String ADD_PRODUCT = "Allows you to create a new product";
+    public static final String PRODUCT_CREATED_SUCCESS = "Successful response, product created";
+    public static final String PRODUCT_CONTROLLER_DESCRIPTION = "Product management including creation, and listing of products with pagination and sorting options";
+    public static final String SCHEMAS_CREATED_PRODUCT_REQUEST_PARAMETER = "Created Product request object containing name, description, quantity, price, brand ID, and category IDs";
 }
